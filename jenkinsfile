@@ -11,7 +11,7 @@ pipeline {
                 script {
                     sshagent(credentials: ['Uriel']){
                     sh '''
-                        ssh uriel@192.168.1.12 "docker pull nginx && \
+                        ssh IP_LOGIN "docker pull nginx && \
                         docker run --name test_nx -p 80:80 -d nginx"
                     '''
                     }
